@@ -1,0 +1,282 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineView</title>
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK1DBWE0DG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DK1DBWE0DG');
+</script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="grid-container">
+            <div class="grid-x navItems">
+                <div class="cell large-2 medium-3 small-6 logo">
+                    <img class="click-home logo" src="img/logo.png" alt="Skull TV Logo - Home">
+                </div>
+                <div class="cell large-10 medium-9 small-6">
+                    <nav class="main-nav" id="mainNav" aria-label="Primary">
+                        <div class="search">
+                            <input type="text" placeholder="Search..." id="search">
+                            <i class="fa-solid fa-search icon"></i>
+                            <div class="search-results"></div>
+                        </div>
+                    </nav>
+                    <button class="menu-toggle" id="menuToggle" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <nav id="mobileNav" class="mobile-nav" aria-label="Mobile" hidden>
+            <div class="mobile-nav-inner">
+                <section class="search mobile-search">
+                    <input type="text" placeholder="Search..." id="search-mobile">
+                    <i class="fa-solid fa-search icon"></i>
+                </section>
+                <a href="#" class="mobile-link click-movies">MOVIES</a>
+                <a href="#" class="mobile-link click-people">ACTORS</a>
+                <a href="#" class="mobile-link click-about">ABOUT</a>
+            </div>
+        </nav>
+    </header>
+    <main class="grid-container">
+        <section id="home" class="home-show hideAll">
+            <div class=" hero-img">
+                <div class="cell large-12 ">
+                    <img src="img/hero.png" alt="Hero banner for Skull TV">
+                </div>
+            </div>
+            <div class="border"></div>
+            <div class="grid-x section-header">
+                <div class="cell large-12">
+                    <h2>RECENTLY ADDED</h2>
+                </div>
+            </div>
+            <div class="recently-added-slider">
+                <div class="recently-added-container grid-x grid-margin-x">
+                </div>
+            </div>
+            <div class="grid-x section-header">
+                <div class="cell large-12">
+                    <h2>TOP RATED</h2>
+                </div>
+            </div>
+            <div class="top-rated-slider">
+                <div class="top-rated-container grid-x grid-margin-x">
+                </div>
+            </div>
+            <div class="grid-x section-header">
+                <div class="cell large-12">
+                    <h2>EDITOR'S CHOICE</h2>
+                </div>
+            </div>
+            <div class="editors-choice-slider">
+                <div class="editors-choice-container grid-x grid-margin-x">
+                </div>
+            </div>
+        </section>
+        <section id="movie" class="movies-show hideAll">
+            <div class="grid-x grid-margin-x">
+                <div class="cell large-12 movie-hero">
+                    <div class="grid-x grid-margin-x align-middle">
+                        <div class="cell large-3 medium-4 small-12">
+                            <div class="movie-poster">
+                                <img class="movie-image" src="" alt="">
+                            </div>
+                        </div>
+                        <div class="cell large-9 medium-8 small-12">
+                            <h1 class="movie-name"></h1>
+                            <div class="movie-rating-meta">
+                                <div class="star-rating">★★★★☆</div>
+                                <p class="movie-meta">
+                                    <span class="movie-year"></span>
+                                    &bull;
+                                    <span class="movie-runtime"></span>
+                                </p>
+                            </div>
+                            <div class="movie-meta-extra">
+                                <p><strong>Genre:</strong> <span class="movie-genre"></span></p>
+                                <p><strong>Writers:</strong> <span class="movie-writers"></span></p>
+                            </div>
+                            <p class="movie-description"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell large-12 section-header">
+                    <h2>PHOTOS</h2>
+                </div>
+                <div class="cell large-12">
+                    <div class="grid-x grid-margin-x movie-photos">
+                    </div>
+                </div>
+                <div class="cell large-12 section-header">
+                    <h2>REVIEWER'S OPINION</h2>
+                </div>
+                <div class="cell large-12">
+                    <div class="reviewer-container">
+                        <div class="reviewer-image-box">
+                            <img src="" alt="Reviewer photo">
+                        </div>
+                        <div class="reviewer-text">
+                            <h3 id="review-title">IT WAS SCARY!</h3>
+                            <p id="review-text"></p>
+                        </div>
+                    </div>
+                    <div class="cell large-12 section-header">
+                        <h2>CAST</h2>
+                    </div>
+                    <div class="cell large-12">
+                        <div class="movie-actors grid-x grid-margin-x">
+                        </div>
+                    </div>
+                    <div class="cell large-12 section-header">
+                        <h2>VIDEO</h2>
+                    </div>
+                    <div class="cell large-12 mb-5">
+                        <div class="grid-x align-middle">
+                            <div class="cell large-6 medium-6 small-12">
+                                <div class="movie-youtube">
+                                    <iframe class="movie-youtube" width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
+                                    title="YouTube video player" frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                </iframe>
+                                </div>
+                            </div>
+                            <div class="cell large-6 medium-6 small-12">
+                                <div class="video-description-box">
+                                    <h4>Sneak Peak!</h4>
+                                    <p>
+                                        Step behind the scenes and discover the magic of filmmaking! See the cast in action, explore the stunning sets, and catch the thrilling moments that bring the story to life.  
+                                        Get an exclusive look at the creativity, passion, and artistry that go into every scene.  
+                                        From unforgettable performances to breathtaking visuals, this video takes you closer to the heart of the movie.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell large-12 section-header">
+                        <h2>SIMILAR MOVIES</h2>
+                    </div>
+                    <div class="cell large-12 mb-5">
+                        <div class="movie-related-movies grid-x grid-margin-x"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="people" class="people-show hideAll">
+            <div class="actor-header grid-x grid-margin-x">
+                <div class="cell large-4 medium-4 small-12">
+                    <div class="actor-photo-container">
+                        <img src="" alt="Actor Portrait">
+                    </div>
+                </div>
+                <div class="cell large-8 medium-8 small-12 actor-bio">
+                    <h1></h1>
+                    <ul class="actor-meta-list">
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-x section-header">
+                <div class="cell large-12">
+                    <h2>FILMOGRAPHY</h2>
+                </div>
+            </div>
+            <div class="filmography-slider">
+                <div class="filmography-container grid-x grid-margin-x">
+                </div>
+            </div>
+            <div class="grid-x grid-margin-x">
+                <div class="cell large-12 section-header">
+                    <h2>PHOTOS</h2>
+                </div>
+                <div class="photos-slider">
+                    <div class="grid-x grid-margin-x photos-container">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about-show hideAll">
+            <div class="about-container">
+                <h1 class="about-heading">About Skull TV</h1>
+                <p class="about-subheading">Fear is an art form, we just give it a platform.</p>
+                <div class="about-content">
+                    <p>
+                        Skull TV was built for the ones who stay up late the ones who love stories that unsettle, 
+                        provoke, and make your pulse race. We believe horror isn't cheap thrills it's cinema at its 
+                        most honest. What scares us reveals who we are.
+                    </p>
+                    <p>
+                        From psychological masterpieces to indie gems, we curate films that go beyond blood and 
+                        shadows. Our mission is to create a space where filmmakers, actors, and fans connect through 
+                        their love for the strange and the beautiful because horror deserves respect.
+                    </p>
+                    <p>
+                        Whether you're hunting for your next obsession or rediscovering a forgotten classic, 
+                        Skull TV is your gateway to everything hauntingly good. Welcome to the darker side of cinema.
+                    </p>
+                </div>
+                <div class="about-footer">
+                    <h3>Skull TV</h3>
+                    <p>Streaming Fear. Curating Stories. Redefining Horror.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="grid-container">
+            <div class="footer-top">
+                <div class="footer-links-col">
+                    <nav class="footer-links-grid" aria-label="Footer Links">
+                        <a href="#">Licensing</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms &amp; Conditions</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Advertising</a>
+                        <a href="#">Data Usage</a>
+                        <a href="#">Cookies</a>
+                        <a href="#">Easter Egg</a>
+                    </nav>
+                </div>
+                <div class="footer-socials-col">
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><img class="socials" src="img/13.png" alt="Facebook icon"></a>
+                        <a href="#" aria-label="Twitter"><img class="socials" src="img/14.png" alt="Twitter icon"></a>
+                        <a href="#" aria-label="Instagram"><img class="socials" src="img/15.png" alt="Instagram icon"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-note">Images and content used for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/vendor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/55667efe47.js" crossorigin="anonymous"></script>
+    <script src="assets/js/foundation.js"></script>
+    <script src="assets/js/sammy.min.js"></script>
+    <script src="assets/js/sammy.template.js"></script>
+    <script src="assets/js/main.js?v=1.0"></script>
+</body>
+</html>
